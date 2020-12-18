@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,12 +14,40 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
+        <p>Image for cover example:</p>
+        <div className={styles.hero}>
+          <Image
+            src="/cover.jpg"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <p>Image for listing example:</p>
+        <div className={styles.listing}>
+          <Image
+            src="/prod.jpg"
+            alt="Picture of the author"
+            layout="responsive"
+            width="400"
+            height="300"
+            objectFit="cover"
+          />
+          A product title
+        </div>
+        <p>Image for listing fill example:</p>
+        <div className={styles.listing}>
+          <div className={styles.listingImage}>
+            <Image
+              src="/prod2.jpg"
+              alt="Picture of the author"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          A product title
+        </div>
+        -------------------------------------
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
@@ -56,10 +85,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }

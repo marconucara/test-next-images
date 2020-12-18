@@ -120,3 +120,43 @@
     flex-direction: column;
   }
 }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+.listing {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 1px 1px 10px rgba(100, 100, 100, 0.2);
+  border-radius: 12px;
+  font-size: 30px;
+}
+@media (min-width: 800px) {
+  .listing {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .listing {
+    width: 33%;
+  }
+}
+
+.listingImage {
+  padding-bottom: 75%;
+  overflow: hidden;
+  position: relative;
+}
