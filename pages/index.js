@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <h2>Image for cover example: </h2>
+        <h2>1.1) Image for cover example: </h2>
         <code>layout="fill" objectFit="cover"</code>
         <div className={styles.hero}>
           <Image
@@ -24,7 +24,18 @@ export default function Home() {
             objectFit="cover"
           />
         </div>
-        <h2>1 Image for listing example: </h2>
+        <h2>1.2) Image for cover example: </h2>
+        <code>layout="responsive" width="1600" height="900"</code>
+        <div className={styles.hero}>
+          <Image
+            src="/cover.jpg"
+            alt="Picture of the author"
+            layout="responsive"
+            width="1600"
+            height="900"
+          />
+        </div>
+        <h2>2.1) Image for listing example: </h2>
         <code>
           layout="responsive" width="400" height="300" objectFit="cover"
         </code>
@@ -39,7 +50,7 @@ export default function Home() {
           />
           A product title
         </div>
-        <h2>2 Image for listing fill example: </h2>
+        <h2>2.2 Image for listing fill example: </h2>
         <code>
           layout="fill" objectFit="cover" (fixed proportion with padding-bottom
           trick)
@@ -55,7 +66,7 @@ export default function Home() {
           </div>
           A product title
         </div>
-        <h2>3 Image for listing fill example: </h2>
+        <h2>2.3 Image for listing fill example: </h2>
         <code>
           layout="responsive" width="400" height="300" objectFit="cover" sizes=
           {["(min-width: 640px) 640px", "(min-width: 1080px) 1080px"]}
