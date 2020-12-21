@@ -14,7 +14,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <p>Image for cover example:</p>
+        <h2>Image for cover example: </h2>
+        <code>layout="fill" objectFit="cover"</code>
         <div className={styles.hero}>
           <Image
             src="/cover.jpg"
@@ -23,7 +24,10 @@ export default function Home() {
             objectFit="cover"
           />
         </div>
-        <p>Image for listing example:</p>
+        <h2>1 Image for listing example: </h2>
+        <code>
+          layout="responsive" width="400" height="300" objectFit="cover"
+        </code>
         <div className={styles.listing}>
           <Image
             src="/prod.jpg"
@@ -35,7 +39,11 @@ export default function Home() {
           />
           A product title
         </div>
-        <p>Image for listing fill example:</p>
+        <h2>2 Image for listing fill example: </h2>
+        <code>
+          layout="fill" objectFit="cover" (fixed proportion with padding-bottom
+          trick)
+        </code>
         <div className={styles.listing}>
           <div className={styles.listingImage}>
             <Image
@@ -45,6 +53,23 @@ export default function Home() {
               objectFit="cover"
             />
           </div>
+          A product title
+        </div>
+        <h2>3 Image for listing fill example: </h2>
+        <code>
+          layout="responsive" width="400" height="300" objectFit="cover" sizes=
+          {["(min-width: 640px) 640px", "(min-width: 1080px) 1080px"]}
+        </code>
+        <div className={styles.listing}>
+          <Image
+            src="/prod3.jpg"
+            alt="Picture of the author"
+            layout="responsive"
+            width="400"
+            height="300"
+            objectFit="cover"
+            sizes={["(min-width: 640px) 640px", "(min-width: 1080px) 1080px"]}
+          />
           A product title
         </div>
         -------------------------------------
